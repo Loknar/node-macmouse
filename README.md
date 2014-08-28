@@ -16,32 +16,32 @@ var ptY = 600;
 
 mouse.setPos(ptX, ptY);
 
-var doThing = function() {
+var doThings = function() {
     mouse.Place(ptX, ptY);
-    setTimeout(doAnotherThing, 250);
+    setTimeout(pressAndHold, 250);
 }
 
-var doAnotherThing = function() {
+var pressAndHold = function() {
     mouse.LeftButtonPress();
-    setTimeout(doStrangeStuff, 250);
+    setTimeout(doDragStuff, 250);
 }
 
-var doStrangeStuff = function() {
+var doDragStuff = function() {
     ptX += 2;
     ptY += 2;
     mouse.DragPlace(ptX, ptY);
-    setTimeout(doStrangeStuff, 250);
+    setTimeout(doDragStuff, 250);
 }
 
 
-doThing();
+doThings();
 
 mouse.quit();
 
 ```
 
 ## License
-(The MIT License)
+(MIT License)
 
 THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
