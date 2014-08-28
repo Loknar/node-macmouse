@@ -22,8 +22,6 @@ mouse.init();
 var ptX = 800;
 var ptY = 600;
 
-mouse.setPos(ptX, ptY);
-
 var doThings = function() {
     mouse.Place(ptX, ptY);
     setTimeout(pressAndHold, 250);
