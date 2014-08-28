@@ -1,0 +1,29 @@
+{
+  "name": "macmouse",
+  "version": "0.0.1",
+  "description": "Enables you to create virtual mouse input on Mac OS X using Cocoa.",
+  "author": "Sveinn Floki Gudmundsson <svefgud@gmail.com>",
+  "contributors": [{
+    "name": "Sveinn Floki Gudmundsson",
+    "email": "svefgud@gmail.com"
+  }],
+  "repository" :
+  { "type" : "git",
+    "url" : "https://github.com/Loknar/node-macmouse.git"
+  },
+  "main": "macmouse.js",
+  "keywords": [
+    "native mouse",
+    "mac os x"
+  ],
+  "bugs": {
+    "url": "https://github.com/Loknar/node-macmouse/issues"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "NodObjC": "~1.0.0"
+  },
+  "license": "MIT"
+}
