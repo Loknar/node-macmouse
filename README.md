@@ -3,7 +3,7 @@
 Enables you to create virtual mouse input on Mac OS X using Cocoa.
 
 ## Credits
-Uses [NodObjC](https://github.com/TooTallNate/NodObjC) to hook into the Cocoa framework. The macmouse module is merely a wrapper around mouse control calls to the Cocoa framework via NodObjC.
+Uses [NodObjC](https://github.com/TooTallNate/NodObjC) to hook into the Cocoa framework. The macmouse module is merely a wrapper around mouse control commands to the Cocoa framework via NodObjC.
 
 ## Installation
 
