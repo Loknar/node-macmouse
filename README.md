@@ -15,7 +15,7 @@ $ npm install macmouse
 
 ## Usage Example
 ```
-mouse = require('macmouse');
+var mouse = require('macmouse');
 
 mouse.init();
 
