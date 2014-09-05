@@ -13,6 +13,11 @@ var init = function() {
     pool = $.NSAutoreleasePool('alloc')('init');
 }
 
+var getRealPos = function() {
+    var pos = $.NSEvent("mouseLocation");
+    return { x: pos.x, y: pos.y };
+}
+
 var getPos = function() {
     return { x: ptX, y: ptY };
 }
@@ -23,25 +28,27 @@ var setPos = function(x, y) {
 }
 
 var Place = function(x, y) {
+    setPos(x, y);
     var moveEvent = $.CGEventCreateMouseEvent(null, $.kCGEventMouseMoved, $.CGPointMake(x, y), $.kCGMouseButtonLeft);
     $.CGEventPost($.kCGHIDEventTap, moveEvent);
 }
 
 var DragPlace = function(x, y) {
+    setPos(x, y);
     var moveEvent = $.CGEventCreateMouseEvent(null, $.kCGEventLeftMouseDragged, $.CGPointMake(x, y), $.kCGMouseButtonLeft);
     $.CGEventPost($.kCGHIDEventTap, moveEvent);
 }
 
-var Move = function(x, y) {
-    ptX += x;
-    ptY += y;
+var Move = function(dx, dy) {
+    ptX += dx;
+    ptY += dy;
     var moveEvent = $.CGEventCreateMouseEvent(null, $.kCGEventMouseMoved, $.CGPointMake(ptX, ptY), $.kCGMouseButtonLeft);
     $.CGEventPost($.kCGHIDEventTap, moveEvent);
 }
 
-var DragMove = function(x, y) {
-    ptX += x;
-    ptY += y;
+var DragMove = function(dx, dy) {
+    ptX += dx;
+    ptY += dy;
     var moveEvent = $.CGEventCreateMouseEvent(null, $.kCGEventLeftMouseDragged, $.CGPointMake(ptX, ptY), $.kCGMouseButtonLeft);
     $.CGEventPost($.kCGHIDEventTap, moveEvent);
 }
