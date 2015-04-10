@@ -129,7 +129,7 @@ mouse.Move(dx, dy);
 //         system mouse currently has (or thinks it has) the left mouse button pressed
 // After:  mouse event has been sent to move the system mouse by a vector defined by the numbers dx and dy 
 //         with left mouse button pressed
-mouse.Move(dx, dy);
+mouse.DragMove(dx, dy);
 ```
 
 ### LeftButtonPress
