@@ -79,6 +79,7 @@ var quit = function() {
 
 module.exports = {
     init: init,
+    getRealPos: getRealPos,
     getPos: getPos,
     setPos: setPos,
     Place: Place,
