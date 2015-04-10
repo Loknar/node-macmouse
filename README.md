@@ -156,7 +156,7 @@ mouse.LeftButtonRelease();
 // Desc:   Sends mouse event message to press and hold down the right button of the system mouse
 // Before: mouse is an initialized macmouse
 // After:  mouse event has been sent to press and hold the right button on the system mouse
-mouse.LeftButtonPress();
+mouse.RightButtonPress();
 ```
 
 ### RightButtonRelease
@@ -165,7 +165,7 @@ mouse.LeftButtonPress();
 // Desc:   Sends mouse event message to release a pressed right button of the system mouse
 // Before: mouse is an initialized macmouse
 // After:  mouse event has been sent to release a pressed right button on the system mouse
-mouse.LeftButtonRelease();
+mouse.RightButtonRelease();
 ```
 
 ### quit
