@@ -83,7 +83,6 @@ module.exports = {
     init: init,
     getRealPos: getRealPos,
     getPos: getPos,
-    setPos: setPos,
     Place: Place,
     DragPlace: DragPlace,
     Move: Move,
