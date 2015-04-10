@@ -12,8 +12,7 @@ var ptY = 0;
 var init = function() {
     pool = $.NSAutoreleasePool('alloc')('init');
     var pos = getRealPos();
-    ptX = pos.x;
-    ptY = pos.y;
+    setPos(pos.x, pos.y);
 }
 
 var getRealPos = function() {
