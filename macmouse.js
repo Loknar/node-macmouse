@@ -37,6 +37,7 @@ var getRealPos = function() {
  * Desc:   Returns mouse position currently stored in the mouse module
  * Before: mouse is an initialized macmouse
  * After:  pos holds x and y numbers representing the system mouse position currently stored in the
+ *         mouse module
  */
 var getPos = function() {
     return { x: ptX, y: ptY };
