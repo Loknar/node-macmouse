@@ -50,7 +50,7 @@ mouse.quit();
 
 And a small description for each function.
 
-```
+``` javascript
 // Desc:   Imports the macmouse module as mouse
 // Before: nothing
 // After:  mouse is an uninitialized macmouse
@@ -59,7 +59,7 @@ var mouse = require('macmouse');
 
 ### init
 
-```
+``` javascript
 // Desc:   Initializes the macmouse module
 // Before: mouse is an uninitialized macmouse
 // After:  mouse is an initialized macmouse
@@ -68,7 +68,7 @@ mouse.init();
 
 ### getRealPos
 
-```
+``` javascript
 // Desc:   Sends request for real mouse position, more expensive than getPos
 // Before: mouse is an initialized macmouse
 // After:  pos holds x and y numbers representing the system mouse position
@@ -79,7 +79,7 @@ var y = pos.y;
 
 ### getPos
 
-```
+``` javascript
 // Desc:   Returns mouse position currently stored in the mouse module
 // Before: mouse is an initialized macmouse
 // After:  pos holds x and y numbers representing the system mouse position currently stored in the
@@ -91,7 +91,7 @@ var y = pos.y;
 
 ### Place
 
-```
+``` javascript
 // Desc:   Sends mouse event message to place the system mouse at a specific position
 // Before: mouse is an initialized macmouse, x and y are numbers representing a specific position
 // After:  mouse event has been sent to move the system mouse to position defined by x and y
@@ -100,7 +100,7 @@ mouse.Place(x, y);
 
 ### DragPlace
 
-```
+``` javascript
 // Desc:   Sends mouse event message to place the system mouse at a specific position while in a 
 //         dragging state
 // Before: mouse is an initialized macmouse, x and y are numbers representing a specific position, the 
@@ -112,7 +112,7 @@ mouse.DragPlace(x, y);
 
 ### Move
 
-```
+``` javascript
 // Desc:   Sends mouse event message to move the system mouse (from current stored position in the mouse 
 //         module) by a vector defined by dx and dy
 // Before: mouse is an initialized macmouse, dx and dy are numbers representing our moving vector 
@@ -122,7 +122,7 @@ mouse.Move(dx, dy);
 
 ### DragMove
 
-```
+``` javascript
 // Desc:   Sends mouse event message to move the system mouse (from current stored position in the mouse 
 //         module) by a vector defined by dx and dy while in a dragging state
 // Before: mouse is an initialized macmouse, dx and dy are numbers representing our moving vector, the 
@@ -134,7 +134,7 @@ mouse.DragMove(dx, dy);
 
 ### LeftButtonPress
 
-```
+``` javascript
 // Desc:   Sends mouse event message to press and hold down the left button of the system mouse
 // Before: mouse is an initialized macmouse
 // After:  mouse event has been sent to press and hold the left button on the system mouse
@@ -143,7 +143,7 @@ mouse.LeftButtonPress();
 
 ### LeftButtonRelease
 
-```
+``` javascript
 // Desc:   Sends mouse event message to release a pressed left button of the system mouse
 // Before: mouse is an initialized macmouse
 // After:  mouse event has been sent to release a pressed left button on the system mouse
@@ -152,7 +152,7 @@ mouse.LeftButtonRelease();
 
 ### RightButtonPress
 
-```
+``` javascript
 // Desc:   Sends mouse event message to press and hold down the right button of the system mouse
 // Before: mouse is an initialized macmouse
 // After:  mouse event has been sent to press and hold the right button on the system mouse
@@ -161,7 +161,7 @@ mouse.RightButtonPress();
 
 ### RightButtonRelease
 
-```
+``` javascript
 // Desc:   Sends mouse event message to release a pressed right button of the system mouse
 // Before: mouse is an initialized macmouse
 // After:  mouse event has been sent to release a pressed right button on the system mouse
@@ -170,7 +170,7 @@ mouse.RightButtonRelease();
 
 ### quit
 
-```
+``` javascript
 // Desc:   Does garbage collection some on objective c stuff, be a good lad and call this when 
 //         you're done using the macmouse module
 // Before: mouse is an initialized macmouse
