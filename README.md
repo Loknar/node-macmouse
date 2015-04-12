@@ -171,7 +171,7 @@ mouse.RightButtonRelease();
 ### quit
 
 ``` javascript
-// Desc:   Does garbage collection some on objective c stuff, be a good lad and call this when 
+// Desc:   Does garbage collection on some objective c stuff, be a good lad and call this when 
 //         you're done using the macmouse module
 // Before: mouse is an initialized macmouse
 // After:  mouse is an uninitialized macmouse
