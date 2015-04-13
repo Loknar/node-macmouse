@@ -23,7 +23,7 @@
     "node": "*"
   },
   "dependencies": {
-    "NodObjC": "~1.0.0"
+    "nodobjc": "~2.0.0"
   },
   "license": "MIT"
 }
