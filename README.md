@@ -1,5 +1,7 @@
 # macmouse
 
+[![NPM](https://nodei.co/npm/macmouse.png)](https://nodei.co/npm/macmouse/)
+
 A node.js module that enables you to create virtual mouse input on Mac OS X.
 
 ## Credits
