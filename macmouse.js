@@ -151,6 +151,28 @@ var RightButtonRelease = function() {
 }
 
 /**
+ * Usage:  mouse.doubleClick();
+ * Desc:   Sends mouse event message to double click the system mouse
+ * Before: mouse is an initialized macmouse
+ * After:  mouse event has been sent to double click the system mouse
+ */
+var doubleClick = function() {
+  var evt = $.CGEventCreateMouseEvent(null, $.kCGEventLeftMouseDown, $.CGPointMake(ptX, ptY), $.kCGMouseButtonLeft);
+
+  $.CGEventSetIntegerValueField(evt, $.kCGMouseEventClickState, 2);
+  $.CGEventPost($.kCGHIDEventTap, evt);
+
+  $.CGEventSetType(evt, $.kCGEventLeftMouseUp);
+  $.CGEventPost($.kCGHIDEventTap, evt);
+
+  $.CGEventSetType(evt, $.kCGEventLeftMouseDown);
+  $.CGEventPost($.kCGHIDEventTap, evt);
+
+  $.CGEventSetType(evt, $.kCGEventLeftMouseUp);
+  $.CGEventPost($.kCGHIDEventTap, evt);
+}
+
+/**
  * Usage:  mouse.quit();
  * Desc:   Does garbage collection some on objective c stuff, be a good lad and call this when 
  *         you're done using the macmouse module
@@ -173,5 +195,6 @@ module.exports = {
     LeftButtonRelease: LeftButtonRelease,
     RightButtonPress: RightButtonPress,
     RightButtonRelease: RightButtonRelease,
+    doubleClick: doubleClick,
     quit: quit
 }
