@@ -30,3 +30,6 @@ node_modules
 # Sublime Text files
 macmouse.sublime-project
 macmouse.sublime-workspace
+
+# ignore test file
+test.js
