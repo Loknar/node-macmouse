@@ -24,6 +24,8 @@ mouse.init();
 var ptX = 800;
 var ptY = 600;
 
+var counter = 0;
+
 var doThings = function() {
     mouse.Place(ptX, ptY);
     setTimeout(pressAndHold, 250);
@@ -38,7 +40,13 @@ var doDragStuff = function() {
     ptX += 2;
     ptY += 2;
     mouse.DragPlace(ptX, ptY);
-    setTimeout(doDragStuff, 250);
+    if (counter < 15) {
+        counter += 1;
+        setTimeout(doDragStuff, 250);
+    }
+    else {
+        mouse.LeftButtonRelease();
+    }
 }
 
 
