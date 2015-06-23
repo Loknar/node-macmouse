@@ -170,6 +170,15 @@ mouse.RightButtonPress();
 mouse.RightButtonRelease();
 ```
 
+### doubleClick
+
+``` javascript
+// Desc:   Sends mouse event message to double click the system mouse
+// Before: mouse is an initialized macmouse
+// After:  mouse event has been sent to double click the system mouse
+mouse.doubleClick();
+```
+
 ### quit
 
 ``` javascript
