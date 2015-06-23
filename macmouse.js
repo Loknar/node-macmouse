@@ -129,6 +129,17 @@ var LeftButtonRelease = function() {
 }
 
 /**
+ * Usage:  mouse.Click();
+ * Desc:   Sends mouse event message to press and release left button of the system mouse
+ * Before: mouse is an initialized macmouse
+ * After:  mouse event has been sent to press and release left button on the system mouse
+ */
+var Click = function() {
+    LeftButtonPress();
+    LeftButtonRelease();
+}
+
+/**
  * Usage:  mouse.RightButtonPress();
  * Desc:   Sends mouse event message to press and hold down the right button of the system mouse
  * Before: mouse is an initialized macmouse
@@ -151,25 +162,32 @@ var RightButtonRelease = function() {
 }
 
 /**
+ * Usage:  mouse.RightClick();
+ * Desc:   Sends mouse event message to press and release right button of the system mouse
+ * Before: mouse is an initialized macmouse
+ * After:  mouse event has been sent to press and release right button on the system mouse
+ */
+var RightClick = function() {
+    RightButtonPress();
+    RightButtonRelease();
+}
+
+/**
  * Usage:  mouse.doubleClick();
  * Desc:   Sends mouse event message to double click the system mouse
  * Before: mouse is an initialized macmouse
  * After:  mouse event has been sent to double click the system mouse
  */
 var doubleClick = function() {
-  var evt = $.CGEventCreateMouseEvent(null, $.kCGEventLeftMouseDown, $.CGPointMake(ptX, ptY), $.kCGMouseButtonLeft);
-
-  $.CGEventSetIntegerValueField(evt, $.kCGMouseEventClickState, 2);
-  $.CGEventPost($.kCGHIDEventTap, evt);
-
-  $.CGEventSetType(evt, $.kCGEventLeftMouseUp);
-  $.CGEventPost($.kCGHIDEventTap, evt);
-
-  $.CGEventSetType(evt, $.kCGEventLeftMouseDown);
-  $.CGEventPost($.kCGHIDEventTap, evt);
-
-  $.CGEventSetType(evt, $.kCGEventLeftMouseUp);
-  $.CGEventPost($.kCGHIDEventTap, evt);
+    var evt = $.CGEventCreateMouseEvent(null, $.kCGEventLeftMouseDown, $.CGPointMake(ptX, ptY), $.kCGMouseButtonLeft);
+    $.CGEventSetIntegerValueField(evt, $.kCGMouseEventClickState, 2);
+    $.CGEventPost($.kCGHIDEventTap, evt);
+    $.CGEventSetType(evt, $.kCGEventLeftMouseUp);
+    $.CGEventPost($.kCGHIDEventTap, evt);
+    $.CGEventSetType(evt, $.kCGEventLeftMouseDown);
+    $.CGEventPost($.kCGHIDEventTap, evt);
+    $.CGEventSetType(evt, $.kCGEventLeftMouseUp);
+    $.CGEventPost($.kCGHIDEventTap, evt);
 }
 
 /**
@@ -193,8 +211,10 @@ module.exports = {
     DragMove: DragMove,
     LeftButtonPress: LeftButtonPress,
     LeftButtonRelease: LeftButtonRelease,
+    Click: Click,
     RightButtonPress: RightButtonPress,
     RightButtonRelease: RightButtonRelease,
+    RightClick: RightClick,
     doubleClick: doubleClick,
     quit: quit
 }

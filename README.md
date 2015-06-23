@@ -152,6 +152,15 @@ mouse.LeftButtonPress();
 mouse.LeftButtonRelease();
 ```
 
+### Click
+
+``` javascript
+// Desc:   Sends mouse event message to press and release left button of the system mouse
+// Before: mouse is an initialized macmouse
+// After:  mouse event has been sent to press and release left button on the system mouse
+mouse.Click();
+```
+
 ### RightButtonPress
 
 ``` javascript
@@ -168,6 +177,15 @@ mouse.RightButtonPress();
 // Before: mouse is an initialized macmouse
 // After:  mouse event has been sent to release a pressed right button on the system mouse
 mouse.RightButtonRelease();
+```
+
+### RightClick
+
+``` javascript
+// Desc:   Sends mouse event message to press and release right button of the system mouse
+// Before: mouse is an initialized macmouse
+// After:  mouse event has been sent to press and release right button on the system mouse
+mouse.RightClick();
 ```
 
 ### doubleClick
