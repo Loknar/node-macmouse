@@ -191,28 +191,19 @@ var DoubleClick = function() {
 }
 
 /**
- * Usage:  mouse.ScrollUp(s);
- * Desc:   Sends event message to scroll up the system mouse
- * Before: mouse is an initialized macmouse, s is an integer from 1 to
- * 10 that defines the scroll speed, s defaults to 5 if not provided
- * After:  scroll event has been sent to scroll up with speed s
+ * Usage:  mouse.Scroll(vertical, horizontal);
+ * Desc:   Sends mouse scroll event message
+ * Before: mouse is an initialized macmouse, vertical and horizontal
+ *         are 'small signed integer values, typically in a range from -10 to +10',
+ *         in reality they can be any integer from -32768 to 32767,
+ *         if horizontal isn't provided it defaults to 0
+ * After:  scroll event has been sent to scroll by a vector defined by the
+ *         vertical and horizontal integers
  */
-var ScrollUp = function(s) {
-    if (typeof s === 'undefined') s = 5;
-    var scrollEvent = $.CGEventCreateScrollWheelEvent(null, $.kCGScrollEventUnitLine, 1, s);
+var Scroll = function(vertical, horizontal) {
+    if (typeof horizontal === 'undefined') horizontal = 0;
+    var scrollEvent = $.CGEventCreateScrollWheelEvent(null, $.kCGScrollEventUnitLine, 1, vertical, horizontal);
     $.CGEventPost($.kCGHIDEventTap, scrollEvent);
-}
-
-/**
- * Usage:  mouse.ScrollDown(s);
- * Desc:   Sends event message to scroll down the system mouse
- * Before: mouse is an initialized macmouse, s is an integer from 1 to
- * 10 that defines the scroll speed, s defaults to 5 if not provided
- * After:  scroll event has been sent to scroll down with speed s
- */
-var ScrollDown = function(s) {
-    if (typeof s === 'undefined') s = 5;
-    ScrollUp(-s);
 }
 
 /**
@@ -241,7 +232,6 @@ module.exports = {
     RightButtonRelease: RightButtonRelease,
     RightClick: RightClick,
     DoubleClick: DoubleClick,
-    ScrollUp: ScrollUp,
-    ScrollDown: ScrollDown,
+    Scroll: Scroll,
     quit: quit
 }

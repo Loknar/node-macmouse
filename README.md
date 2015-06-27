@@ -205,24 +205,18 @@ mouse.RightClick();
 mouse.DoubleClick();
 ```
 
-### ScrollUp
+### Scroll
 
 ``` javascript
-// Desc:   Sends event message to scroll up the system mouse
-// Before: mouse is an initialized macmouse, s is an integer from 1 to
-// 10 that defines the scroll speed, s defaults to 5 if not provided
-// After:  scroll event has been sent to scroll up with speed s
-mouse.ScrollUp(s);
-```
-
-### ScrollDown
-
-``` javascript
-// Desc:   Sends event message to scroll down the system mouse
-// Before: mouse is an initialized macmouse, s is an integer from 1 to
-// 10 that defines the scroll speed, s defaults to 5 if not provided
-// After:  scroll event has been sent to scroll down with speed s
-mouse.ScrollDown(s);
+// Desc:   Sends event message to scroll the system mouse
+// Before: mouse is an initialized macmouse, vertical and horizontal
+//         are 'small signed integer values, typically in a range from -10 to +10',
+//         in reality they can be any integer from -32768 to 32767,
+//         if horizontal isn't provided it defaults to 0
+// After:  scroll event has been sent to scroll by a vector defined by the
+//         vertical and horizontal integers
+mouse.Scroll(vertical);
+mouse.Scroll(vertical, horizontal);
 ```
 
 ### quit
