@@ -1,6 +1,6 @@
 {
   "name": "macmouse",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Enables you to create virtual mouse input on Mac OS X using Cocoa.",
   "author": "Sveinn Floki Gudmundsson <svefgud@gmail.com>",
   "contributors": [{
