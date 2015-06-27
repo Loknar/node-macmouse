@@ -191,6 +191,31 @@ var doubleClick = function() {
 }
 
 /**
+ * Usage:  mouse.ScrollUp();
+ * Desc:   Sends event message to scroll up the system mouse
+ * Before: mouse is an initialized macmouse, s is an integer from 1 to
+ * 10 that defines the scroll speed, s defaults to 5 if not provided
+ * After:  scroll event has been sent to scroll up with speed s
+ */
+var ScrollUp = function(s) {
+    if (typeof s === 'undefined') s = 5;
+    var scrollEvent = $.CGEventCreateScrollWheelEvent(null, $.kCGScrollEventUnitLine, 1, s);
+    $.CGEventPost($.kCGHIDEventTap, scrollEvent);
+}
+
+/**
+ * Usage:  mouse.ScrollDown();
+ * Desc:   Sends event message to scroll down the system mouse
+ * Before: mouse is an initialized macmouse, s is an integer from 1 to
+ * 10 that defines the scroll speed, s defaults to 5 if not provided
+ * After:  scroll event has been sent to scroll down with speed s
+ */
+var ScrollDown = function(s) {
+    if (typeof s === 'undefined') s = 5;
+    ScrollUp(-s);
+}
+
+/**
  * Usage:  mouse.quit();
  * Desc:   Does garbage collection some on objective c stuff, be a good lad and call this when 
  *         you're done using the macmouse module
@@ -216,5 +241,7 @@ module.exports = {
     RightButtonRelease: RightButtonRelease,
     RightClick: RightClick,
     doubleClick: doubleClick,
+    ScrollUp: ScrollUp,
+    ScrollDown: ScrollDown,
     quit: quit
 }
