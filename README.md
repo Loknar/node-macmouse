@@ -208,7 +208,7 @@ mouse.DoubleClick();
 ### Scroll
 
 ``` javascript
-// Desc:   Sends event message to scroll the system mouse
+// Desc:   Sends mouse scroll event message
 // Before: mouse is an initialized macmouse, vertical and horizontal
 //         are 'small signed integer values, typically in a range from -10 to +10',
 //         in reality they can be any integer from -32768 to 32767,
