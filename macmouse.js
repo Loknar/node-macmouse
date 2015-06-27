@@ -173,12 +173,12 @@ var RightClick = function() {
 }
 
 /**
- * Usage:  mouse.doubleClick();
+ * Usage:  mouse.DoubleClick();
  * Desc:   Sends mouse event message to double click the system mouse
  * Before: mouse is an initialized macmouse
  * After:  mouse event has been sent to double click the system mouse
  */
-var doubleClick = function() {
+var DoubleClick = function() {
     var evt = $.CGEventCreateMouseEvent(null, $.kCGEventLeftMouseDown, $.CGPointMake(ptX, ptY), $.kCGMouseButtonLeft);
     $.CGEventSetIntegerValueField(evt, $.kCGMouseEventClickState, 2);
     $.CGEventPost($.kCGHIDEventTap, evt);
@@ -240,7 +240,7 @@ module.exports = {
     RightButtonPress: RightButtonPress,
     RightButtonRelease: RightButtonRelease,
     RightClick: RightClick,
-    doubleClick: doubleClick,
+    DoubleClick: DoubleClick,
     ScrollUp: ScrollUp,
     ScrollDown: ScrollDown,
     quit: quit
