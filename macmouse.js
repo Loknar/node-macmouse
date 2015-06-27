@@ -191,7 +191,7 @@ var DoubleClick = function() {
 }
 
 /**
- * Usage:  mouse.ScrollUp();
+ * Usage:  mouse.ScrollUp(s);
  * Desc:   Sends event message to scroll up the system mouse
  * Before: mouse is an initialized macmouse, s is an integer from 1 to
  * 10 that defines the scroll speed, s defaults to 5 if not provided
@@ -204,7 +204,7 @@ var ScrollUp = function(s) {
 }
 
 /**
- * Usage:  mouse.ScrollDown();
+ * Usage:  mouse.ScrollDown(s);
  * Desc:   Sends event message to scroll down the system mouse
  * Before: mouse is an initialized macmouse, s is an integer from 1 to
  * 10 that defines the scroll speed, s defaults to 5 if not provided

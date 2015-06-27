@@ -212,7 +212,7 @@ mouse.DoubleClick();
 // Before: mouse is an initialized macmouse, s is an integer from 1 to
 // 10 that defines the scroll speed, s defaults to 5 if not provided
 // After:  scroll event has been sent to scroll up with speed s
-mouse.ScrollUp();
+mouse.ScrollUp(s);
 ```
 
 ### ScrollDown
@@ -222,7 +222,7 @@ mouse.ScrollUp();
 // Before: mouse is an initialized macmouse, s is an integer from 1 to
 // 10 that defines the scroll speed, s defaults to 5 if not provided
 // After:  scroll event has been sent to scroll down with speed s
-mouse.ScrollDown();
+mouse.ScrollDown(s);
 ```
 
 ### quit
