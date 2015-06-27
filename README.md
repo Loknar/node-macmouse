@@ -205,6 +205,8 @@ mouse.RightClick();
 mouse.doubleClick();
 ```
 
+### ScrollUp
+
 ``` javascript
 // Desc:   Sends event message to scroll up the system mouse
 // Before: mouse is an initialized macmouse, s is an integer from 1 to
@@ -212,6 +214,8 @@ mouse.doubleClick();
 // After:  scroll event has been sent to scroll up with speed s
 mouse.ScrollUp();
 ```
+
+### ScrollDown
 
 ``` javascript
 // Desc:   Sends event message to scroll down the system mouse
